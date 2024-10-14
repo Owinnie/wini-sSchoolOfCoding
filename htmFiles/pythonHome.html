@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python - Home</title>
+    <!-- META DESCRIPTION -->
+    <meta name="description" content="winisSchoolOfCoding: Learning a Language in your Language">
+    <!-- META KEYWORDS -->
+    <meta name="keywords" content="Python, English, Swahili, Latin, ASL">
+    <!-- META AUTHOR -->
+    <meta name="author" content="winis">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/png" href="images/logo4.png">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <main>
+        <div class="card-container">
+            <div class="card">
+                <img src="images/#" alt="">
+                <div class="card-content">
+                    <h3>Glossary</h3>
+                    <p>A compilation of key terms, 
+                        concepts, and definitions 
+                        related to the Python 
+                        programming language.
+                    </p>
+                    <a href="#" class="btn" onclick="openLanguageSelection()">Check Me Out</a>
+                </div>
+                <!-- Hidden Pop-up Modal for Language Selection -->
+                <div id="language-modal" class="modal">
+                    <div class="modal-content">
+                        <h4>Select Language</h4>
+                        <select id="language-select">
+                            <option value="english">English</option>
+                            <option value="swahili">Swahili</option>
+                            <option value="latin">Latin</option>
+                            <option value="asl">ASL</option>
+                        </select>
+                        <button onclick="redirectToLanguage()">Go</button>
+                        <button onclick="closeLanguageSelection()">Cancel</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/#" alt="">
+                <div class="card-content">
+                    <h3>Tutorials</h3>
+                    <p>A structured guide designed to 
+                        teach the fundamentals of the 
+                        Python programming language.
+                    </p>
+                    <a href="#" class="btn">Coming Soon</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/#" alt="">
+                <div class="card-content">
+                    <h3>Projects</h3>
+                    <p>Practical applications 
+                        developed using the Python 
+                        programming language. Serve as a hands-on
+                        way to apply Python concepts and skills 
+                        learned through tutorials or coursework. 
+                    </p>
+                    <a href="#" class="btn">Coming Soon</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="images/#" alt="">
+                <div class="card-content">
+                    <h3>Django</h3>
+                    <p>A high-level Python web framework that enabling 
+                        developers build robust and scalable web apps 
+                        quickly and efficiently. 
+                    </p>
+                    <a href="#" class="btn">Coming Soon</a>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <div id="footer-container"></div>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

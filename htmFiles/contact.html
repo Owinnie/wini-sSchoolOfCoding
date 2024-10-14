@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- META DESCRIPTION -->
+    <meta name="description" content="winisSchoolOfCoding: Learning a Language in your Language">
+    <!-- META KEYWORDS -->
+    <meta name="keywords" content="Python, English, Swahili, Latin, ASL">
+    <!-- META AUTHOR -->
+    <meta name="author" content="winis">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/png" href="images/logo4.png">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- STYLESHEET -->
+    <!-- <link rel="stylesheet" href="styles/index.css"> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007BFF;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-icons a {
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .social-icons a img {
+            width: 40px;
+            height: 40px;
+        }
+        .logo {
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "NB6x2avvsbhP62i42",
+            });
+        })();
+    
+        function sendEmail(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Send the form using EmailJS
+            emailjs.sendForm('service_62rn6gh', 'template_2jhs29d', document.getElementById('contact-form'))
+                .then(function() {
+                    alert('Message sent successfully!');
+                    document.getElementById('contact-form').reset(); // Reset form after submission
+                }, function(error) {
+                    alert('Failed to send message: ' + JSON.stringify(error));
+                });
+        }
+    </script>
+    
+</head>
+<body>
+    <!-- <div id="header-container"></div> -->
+    <div class="logo">
+        <map name="logo">
+            <a href="../index.html">
+                <area shape="circle" coords="65,65,65" href="../index.html" title="Home - winisSchoolOfCoding" alt="Home page">
+            </a>
+        </map>
+        <img usemap="#logo" src="images/logo4.png" alt="winisSchoolOfCoding logo" width="80" height="80">
+    </div>
+
+    <main>
+        <div class="container">
+            <h1>Contact Us</h1>
+            <form id="contact-form" onsubmit="sendEmail(event)">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                
+                <input type="submit" value="Send Message">
+            </form>
+    
+            <div class="social-icons">
+                <!-- LinkedIn Icon Link -->
+                <a href="https://www.linkedin.com/company/wini-sschoolofcoding" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn Icon">
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- <div id="footer-container"></div> -->
+    <script src="scripts/index.js"></script>
+</body>
+</html>
